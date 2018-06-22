@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
   <h1>Hello</h1>
-  <button onclick="myfunc()">Hi</button>
+  <button onclick="locater()">Hi</button>
   <div id="holder"></div>
   
   
   <script>
   var location=1;
   let holder=document.getElementById("holder");
-  let myfunc=function(location){
-    console.log(location.cords);  
-    let imag=new Image();
-    imag.src="";
-    holder.appendChild(imag);
+  let locater=function(){
+    let myfunc=function(location){
+    	console.log(location.cords);  
+   		let imag=new Image();
+    	imag.src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Aurora_australis_20050911.jpg";
+    	//holder.appendChild(imag);
+ 		}
+  	let err=function(){
+  		holder.innerHTML="Failure";
+ 		}
+ 	navigator.geolocation.getCurrentPosition(myfunc(),err());
   }
-  let err=function(){
-  	holder.innerHTML="Failure";
-  }
-  navigator.geolocation.getCurrentPosition(myfunc(),err());
     
   </script>
 </html>
