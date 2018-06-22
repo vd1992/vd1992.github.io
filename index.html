@@ -6,13 +6,19 @@
   
   
   <script>
-  let myfunc=function(){
-    console.log("hello");  
+  var location=1;
+  let holder=document.getElementById("holder");
+  let myfunc=function(location){
+    console.log(location.cords);  
+    let imag=new Image();
+    imag.src="";
+    holder.appendChild(imag);
   }
+  let err=function(){
+  	holder.innerHTML="Failure";
+  }
+  navigator.geolocation.getCurrentPosition(myfunc(),err());
     
   </script>
-  
-  
-  
 </html>
 
