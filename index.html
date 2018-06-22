@@ -12,7 +12,7 @@ let locater=function(){
 		console.log(results.latitude);
 		console.log(location.cords);  
    	let imag=new Image();
- 		imag.src="https://maps.googleapis.com/maps/api/staticmap?center=" + results.latitude + "," + results.longitude+"&zoom=14&size=400x400;
+ 		imag.src="https://maps.googleapis.com/maps/api/staticmap?center=" + results.latitude + "," + results.longitude+"&zoom=14&size=400x400";
 		holder.appendChild(imag);
  		}
   let err=function(){
