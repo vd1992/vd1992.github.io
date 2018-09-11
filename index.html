@@ -7,20 +7,19 @@
 <script>
 let holder=document.getElementById("holder");
 let locater=function(){
-  let myfunc=function(location){
-  let results=location.coords;
+	let myfunc=function(location){
+        	let results=location.coords;
 		console.log(results.latitude);
 		console.log(location.cords);  
-   	let imag=new Image();
+   		let imag=new Image();
  		imag.src="https://maps.googleapis.com/maps/api/staticmap?center=" + results.latitude + "," + results.longitude+"&zoom=14&size=400x400&key=AIzaSyBAACnxYrk7BaKlO9HLon7RpU5srEzAo_c";
 		holder.appendChild(imag);
  		}
-  let err=function(){
-  	holder.innerHTML="Failure";
+ 	let err=function(){
+  		holder.innerHTML="Failure";
  		}
  	navigator.geolocation.getCurrentPosition(myfunc,err);
-
-}
+	}
 
 </script>
 
