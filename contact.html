@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Site</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
     <link rel="stylesheet" href="./other/mystyle.css">
 </head>
 
@@ -28,27 +27,25 @@
             <button id="button" onClick='menu()' class='hamburger-icon'>
                     <i class="fas fa-bars fa-2x"></i>
             </button>
-            
+           
             <div id='menu' class="mobile-menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="works.html">Portfolio</a>
                 <a href="contact.html">Contact</a>
             </div>
-        </div>   
+        </div>  
         
-        <h1 class="indexh">
-            Where Are You?
-        </h1>
-        
-        <div id="maphold" class="home-item1">
-        </div>
-        <button class="locButton" onclick="locater()">Click for location</button>
-
-        <div class="weather">
-            <p id="weatherH">Current Weather</p>
-            <div id="icon" class="iconhold"></div>
-            <button class="weatherButton" onclick="WeatherFetch()">Calgary Weather</button>
+        <div class="form-hold">
+            <h2>Send Me An Email (Doesn't Work)</h2>
+            <form>
+                <label for="emailA">Your Email Address:</label>
+                <input id="emailA" type="text" name="email" placeholder="example@example.com"/>   
+                <br/>      
+                <textarea name="comment" placeholder="Kind Words"></textarea>
+                <br/>
+                <button type='submit'>Send</button>
+            </form>
         </div>
 
         <div class="footer">
@@ -62,7 +59,6 @@
     </div>
 
 </body>
-
 
 <script src="other/scripts.js"></script>
 

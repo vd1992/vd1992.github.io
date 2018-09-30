@@ -1,0 +1,305 @@
+/**********************************
+/* BODY */
+/**********************************/
+body{
+    margin:0px;
+}
+
+.whole{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**********************************
+/* NAVIGATION BAR */
+/**********************************/
+.nav{
+    height:53px;
+    width:100%;
+    background: rgb(165, 163, 163);
+    display:flex;
+}
+
+.logo{
+    margin-right:auto;
+    padding-left:25px;
+    padding-top: 7px; 
+}
+
+.links{
+    display:flex;
+    padding-right:75px;
+}
+
+.links a{
+    padding:15px 10px 0px;
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-size: 18px;
+    height:36px;
+    background: rgb(165, 163, 163);
+}
+
+.links a:hover{
+    background:rgb(199, 233, 247)
+}
+
+.hamburger-icon{
+    background: transparent;
+    border: none;
+    display:none; 
+}
+
+/* MOBILE MENU FOR WHEN SHRUNK AREA */
+.mobile-menu{
+    display:none;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    padding-top:5px;
+    padding-left:10px;
+    padding-right:5px;
+    padding-bottom:5px;
+    background:rgb(138, 135, 135);
+    height:100px;
+    z-index: 1;
+}
+
+.mobile-menu a{
+    width:110%;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover{
+    background:rgb(199, 233, 247);
+}
+
+/* MEDIA CHECKS */
+@media (max-width:600px){
+    .nav .links{
+        display:none;
+    }
+    .hamburger-icon{
+        display:block;
+    }
+}
+
+/**********************************
+/*FOOTER STYLING*/
+/**********************************/
+.footer{
+    height:50px;
+    width:100%;
+    background: rgb(165, 163, 163);
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.footer-content i {
+    padding-right:20px;
+}
+
+.footer-content i:hover{
+    transform:translate(0px,-4px);
+    background: rgb(199, 233, 247);
+}
+
+/**********************************
+/*HOME PAGE CONTENT */
+/**********************************/
+.home-item1{
+    margin-top:0px;
+    max-width: 650px;
+    height:500px;
+    width:90%;
+    background: rgb(238, 236, 236);
+}
+
+.indexh{
+    font-family: 'Indie Flower', cursive;
+}
+
+.locButton{
+    margin-top:5px;
+    box-shadow: 3px 3px 1px 1px;
+    margin-bottom:10px;
+}
+
+.locButton:active{
+    margin-top:6px;
+    box-shadow: none;
+    margin-bottom:9px;
+}
+
+.weather{
+    width:40%;
+    max-width:650px;
+    outline:skyblue 2px solid;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:auto;
+    align-items: center;
+}
+
+.weather p{
+    margin-bottom:5px;
+}
+
+.iconhold{
+    height:50px;
+}
+
+.weather button{
+    width:120px;
+    margin-bottom:5px;
+    transition:0.20s;
+    outline:rgb(52, 180, 231) 2px solid;
+}
+
+.weather button:active{
+    transform: scale(0.9,0.9);
+}
+
+/**********************************
+/*ABOUT PAGE CONTENT */
+/**********************************/
+.hero{
+    margin-top:0px;
+    width:90%;
+    height:800px;
+    background:linear-gradient(120deg,rgba(15, 15, 15, 0.1), rgba(179, 176, 176, 0.4)), url('./federico-unsplash.jpg');
+    background-size:cover;
+    background-position:40% 70%;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    margin-bottom:auto;
+}
+
+.hero h1{
+    margin-top:150px;
+    margin-left:75px; 
+    margin-bottom:0px;
+}
+
+.hero h3{
+    margin-left:75px;
+    margin-top:10px;
+}
+
+.hero p{
+    margin-left:85px;
+}
+
+/**********************************
+/*PORTFOLIO PAGE CONTENT */
+/**********************************/
+.port-content{
+    width:85%;
+    height:800px;
+    margin-top:50px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom:auto;
+}
+
+.content-tile{
+    height:350px;
+    width:400px;
+    background: black;
+    margin-bottom:30px;
+    margin-right:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    height:90%;
+    width: 90%;
+    background:#fff;
+    border:18px solid black;
+    transition:1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-tile:hover .content{
+    height: 94%;
+    width: 94%;
+    border:white;
+}
+
+.content h2{
+    height:1em;
+}
+
+.content a{
+    height:25px;
+    text-decoration: underline;
+    color:black;
+}
+
+.content a:hover{
+    background:rgb(199, 233, 247)
+}
+
+/**********************************
+/*CONTACT PAGE CONTENT */
+/**********************************/
+.form-hold{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:auto;
+}
+
+.form-hold form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-hold input{
+    border:darkgray 1px solid;
+    margin-bottom: 5px;
+}
+
+.form-hold input:focus{
+    border:1px skyblue solid;
+    transform:scale(1.1,1.0);
+}
+
+.form-hold textarea{
+    max-width:400px;
+    height:100px;
+    width:90%;
+    margin-top:10px;
+    border:darkgray 1px solid;
+}
+
+.form-hold textarea:focus{
+    border:1px skyblue solid;
+    transform:scale(1.1,1.0);
+}
+
+.form-hold button{
+    margin-top:10px;
+    border:5px solid rgb(202, 198, 198); 
+    transition:0.025s;
+}
+
+.form-hold button:hover{
+    border:5px solid skyblue; 
+}
+
+.form-hold button:active{
+    border:0px solid rgb(202, 198, 198); 
+}
