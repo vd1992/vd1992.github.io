@@ -14,9 +14,18 @@ let menu=function(){
 let holder=document.getElementById("maphold");
 	let locater=function(){
         //create function to get coordinates, get image, then append
-		let myfunc=function(location){
-        	let results=location.coords;
-			let imag=new Image();
+		let mapcreate=function(location){
+            let results=location.coords;
+
+            //check if map already placed, if so, break function
+            if (holder.firstElementChild!==null){
+                return;
+            }
+            
+            //create image, adjust properties to holder div's dimensions
+            let imag=new Image();
+            imag.width=holder.clientWidth;
+            imag.height=holder.clientHeight;
  			imag.src="https://maps.googleapis.com/maps/api/staticmap?center=" + results.latitude + "," + results.longitude+"&zoom=16&size=850x500&key=AIzaSyBAACnxYrk7BaKlO9HLon7RpU5srEzAo_c";
             holder.appendChild(imag);
         }
@@ -25,7 +34,7 @@ let holder=document.getElementById("maphold");
  		let err=function(){
   			holder.innerHTML="Failure";
  		}
- 		navigator.geolocation.getCurrentPosition(myfunc,err);
+ 		navigator.geolocation.getCurrentPosition(mapcreate,err);
     }
 
 // Weather Stuff, start with Fetch API to pull, then take response and select the JSON out of it
@@ -34,7 +43,7 @@ let WeatherFetch=function(){
     fetch(url).then(response => {
           return response.json();
         }).then(weatherJSON => {
-          console.log(weatherJSON);  
+          //console.log(weatherJSON);  
           //replace holder text with conditions from JSON response
           let weatherhold=document.getElementById("weatherH");
           weatherhold.innerHTML="Temperature in Calgary "+ weatherJSON.main.temp +" Kelvin, Condition: " + weatherJSON.weather[0].description + ", Wind: "+ weatherJSON.wind.speed + " m/s";
@@ -42,8 +51,8 @@ let WeatherFetch=function(){
           //append weather icon to holder div
           let icon_var=document.getElementById("icon");
           let imag=document.createElement("img");
-          
-          //statement to prevent appended multiple child nodes
+                    
+          //statement to prevent appending multiple child nodes
           if(icon_var.childElementCount>0){
              return;
           }
