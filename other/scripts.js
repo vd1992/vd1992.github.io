@@ -30,7 +30,7 @@ let holder=document.getElementById("maphold");
 
 // Weather Stuff, start with Fetch API to pull, then take response and select the JSON out of it
 let WeatherFetch=function(){
-    let url="http://api.openweathermap.org/data/2.5/weather?q=Calgary,ca&APPID=117188a5327d55d4bca1feec9be3ee49";
+    let url="https://api.openweathermap.org/data/2.5/weather?q=Calgary,ca&APPID=117188a5327d55d4bca1feec9be3ee49";
     fetch(url).then(response => {
           return response.json();
         }).then(weatherJSON => {
@@ -50,7 +50,7 @@ let WeatherFetch=function(){
 
           //if okay, append child
           let iconimg=weatherJSON.weather[0].icon;
-          imag.src="http://openweathermap.org/img/w/"+iconimg+".png";
+          imag.src="https://openweathermap.org/img/w/"+iconimg+".png";
           icon_var.appendChild(imag);
     })
 };
