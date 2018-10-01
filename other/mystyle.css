@@ -98,6 +98,7 @@ body{
     display:flex;
     justify-content:flex-end;
     align-items:center;
+    margin-right:10px;
 }
 
 .footer-content i {
@@ -105,7 +106,7 @@ body{
 }
 
 .footer-content i:hover{
-    transform:translate(0px,-4px);
+    transform:rotate(-10deg);
     background: rgb(199, 233, 247);
 }
 
