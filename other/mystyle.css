@@ -256,12 +256,20 @@ body{
 /**********************************
 /*CONTACT PAGE CONTENT */
 /**********************************/
+.body-contact{
+    background:linear-gradient(45deg, white, rgb(167, 212, 230));
+}
+
 .form-hold{
     margin-top:50px;
+    padding-left:10px;
+    padding-right:10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom:auto;
+    box-shadow:10px 0px 20px 5px rgb(147, 194, 212);
+    background:rgb(228, 241, 247);
 }
 
 .form-hold form{
@@ -297,6 +305,7 @@ body{
     margin-top:10px;
     border:5px solid rgb(202, 198, 198); 
     transition:0.025s;
+    margin-bottom:5px;
 }
 
 .form-hold button:hover{
@@ -305,4 +314,5 @@ body{
 
 .form-hold button:active{
     border:0px solid rgb(202, 198, 198); 
+    margin-bottom:15px;
 }
