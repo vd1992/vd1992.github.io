@@ -17,6 +17,7 @@ body{
 /* NAVIGATION BAR */
 /**********************************/
 .nav{
+    padding-top:5px;
     height:53px;
     width:100%;
     background: rgb(165, 163, 163);
@@ -26,25 +27,31 @@ body{
 .logoimg{
     height:100%;
     width:100px;
-    background-image: url("./other/Logo2.png");
+    background-image: url("./vdlogo.png");
     background-size: contain;
     background-repeat: no-repeat;
-    /* object-fit:contain; */
+    z-index:1;
+    margin-left:50px;
+    margin-right:auto;
 }
 
 .links{
     display:flex;
     padding-right:75px;
+    padding-top:0px;
+    height:100%;
+    padding-bottom:20px;
 }
 
 .links a{
-    padding:15px 10px 0px;
+    padding:0px 10px 0px;
     text-decoration: none;
     color:black;
     font-weight: 500;
     font-size: 18px;
-    height:36px;
+    height:100%;
     background: rgb(165, 163, 163);
+    
 }
 
 .links a:hover{
