@@ -20,7 +20,7 @@ body{
     padding-top:5px;
     height:53px;
     width:100%;
-    background: rgb(165, 163, 163);
+    background-image: linear-gradient(to right,transparent,rgb(165, 163, 163));
     display:flex;
 }
 
@@ -50,8 +50,7 @@ body{
     font-weight: 500;
     font-size: 18px;
     height:100%;
-    background: rgb(165, 163, 163);
-    
+    background: transparent;
 }
 
 .links a:hover{
@@ -104,7 +103,7 @@ body{
 .footer{
     height:50px;
     width:100%;
-    background: rgb(165, 163, 163);
+    background-image: linear-gradient(to right,transparent,rgb(165, 163, 163));
     display:flex;
     justify-content:flex-end;
     align-items:center;
