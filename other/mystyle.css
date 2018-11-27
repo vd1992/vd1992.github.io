@@ -263,6 +263,21 @@ body{
 }
 
 /**********************************
+/*REACT PAGE CONTENT */
+/**********************************/
+#main-component{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:auto;
+}
+
+#react-rendered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**********************************
 /*CONTACT PAGE CONTENT */
 /**********************************/
 .body-contact{
