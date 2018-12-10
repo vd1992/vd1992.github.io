@@ -364,3 +364,9 @@ body{
     border:0px solid rgb(202, 198, 198); 
     margin-bottom:15px;
 }
+
+.whole iframe{
+    margin-top:10px;
+    margin-bottom:auto;
+}
+
