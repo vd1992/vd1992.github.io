@@ -6,8 +6,8 @@ ReactDOM.render(introMessage, introHolder);
 //React render form component, also minor
 const formHolder = document.querySelector('#form-component');
 const form = <form id="pokeForm">
-                <label for="pokemon">Enter a Pokemon number:</label>
-                <input type="number" name="pokemon" min="1" max="805"></input>
+                <label for="pokemon">Enter a Pokemon number from 1-800:</label>
+                <input id="numberPoke" type="number" name="pokemon" min="1" max="800"></input>
                 <input id="pokemonButton" type="submit" value="Submit"></input>
             </form>
 ReactDOM.render(form, formHolder);
@@ -35,11 +35,43 @@ let reactFunction = function(event){
         return response.json();
       }).then(pokeJSON => {
             //types is an array of 1 or 2 elements, so must variably extract it
+            let typePrimary = pokeJSON.types[0];
             let types="";
             for (let i of pokeJSON.types){
                 types = types + " " + i.type.name;
             }
             ReactDOM.render(<ReactMain name={pokeJSON.name} image={pokeJSON.sprites.front_default} types={types}/>, mainHolder);
+
+            //adjust colour of border assigned to created div, conditional so as to adjust colour to fit to the type in question
+            switch(typePrimary.type.name){
+                case "water": case "ice": 
+                    document.getElementById("react-rendered").style.borderBottomColor = "blue";
+                    break;
+                case "fire":
+                    document.getElementById("react-rendered").style.borderBottomColor = "red";
+                    break;
+                case "grass": case "poison": case "bug":
+                    document.getElementById("react-rendered").style.borderBottomColor = "green";
+                    break;
+                case "electric":
+                    document.getElementById("react-rendered").style.borderBottomColor = "yellow";
+                    break;
+                case "ghost": case "dragon": case "psychic":
+                    document.getElementById("react-rendered").style.borderBottomColor = "purple";
+                    break;
+                case "dark":
+                    document.getElementById("react-rendered").style.borderBottomColor = "black";
+                    break;
+                case "fairy":
+                    document.getElementById("react-rendered").style.borderBottomColor = "pink";
+                    break;
+                case "steel":
+                    document.getElementById("react-rendered").style.borderBottomColor = "silver";
+                    break;
+                default:
+                    document.getElementById("react-rendered").style.borderBottomColor = "#724242";
+                    break;        
+            }
         }
     )
 }
