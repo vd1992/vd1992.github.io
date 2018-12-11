@@ -24,6 +24,10 @@ body{
     display:flex;
 }
 
+.logoLink{
+    margin-right:auto;
+}
+
 .logoimg{
     height:100%;
     width:100px;
@@ -111,12 +115,17 @@ body{
 }
 
 .footer-content i {
-    padding-right:20px;
+    padding-right:30px;
 }
 
 .footer-content i:hover{
     transform:rotate(-10deg);
     background: rgb(199, 233, 247);
+}
+
+.footer-content a{
+    text-decoration: none;
+    color:black;
 }
 
 /**********************************
