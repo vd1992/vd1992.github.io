@@ -44,20 +44,29 @@ let reactFunction = function(event){
 
             //adjust colour of border assigned to created div, conditional so as to adjust colour to fit to the type in question
             switch(typePrimary.type.name){
-                case "water": case "ice": 
+                case "water":
                     document.getElementById("react-rendered").style.borderBottomColor = "blue";
+                    break;
+                case "ice": 
+                    document.getElementById("react-rendered").style.borderBottomColor = "#00BFFF";
                     break;
                 case "fire":
                     document.getElementById("react-rendered").style.borderBottomColor = "red";
                     break;
-                case "grass": case "poison": case "bug":
+                case "grass": case "poison":
                     document.getElementById("react-rendered").style.borderBottomColor = "green";
+                    break;
+                case "bug":
+                    document.getElementById("react-rendered").style.borderBottomColor = "#ADFF2F";
                     break;
                 case "electric":
                     document.getElementById("react-rendered").style.borderBottomColor = "yellow";
                     break;
-                case "ghost": case "dragon": case "psychic":
-                    document.getElementById("react-rendered").style.borderBottomColor = "purple";
+                case "ghost": case "psychic":
+                    document.getElementById("react-rendered").style.borderBottomColor = "#4B0082";
+                    break;
+                case "dragon": 
+                    document.getElementById("react-rendered").style.borderBottomColor = "#BA55D3";
                     break;
                 case "dark":
                     document.getElementById("react-rendered").style.borderBottomColor = "black";
