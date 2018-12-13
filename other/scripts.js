@@ -44,9 +44,9 @@ let WeatherFetch=function(){
           return response.json();
         }).then(weatherJSON => {
           //console.log(weatherJSON);  
-          //replace holder text with conditions from JSON response
+          //replace holder text with conditions from JSON response, convert kelvin to celsius
           let weatherhold=document.getElementById("weatherH");
-          weatherhold.innerHTML="Temperature in Calgary "+ weatherJSON.main.temp +" Kelvin, Condition: " + weatherJSON.weather[0].description + ", Wind: "+ weatherJSON.wind.speed + " m/s";
+          weatherhold.innerHTML="Temperature in Calgary "+ Math.round(100*(parseInt(weatherJSON.main.temp)-273.15))/100 +" Celsius, Condition: " + weatherJSON.weather[0].description + ", Wind: "+ weatherJSON.wind.speed + " m/s";
           
           //append weather icon to holder div
           let icon_var=document.getElementById("icon");
