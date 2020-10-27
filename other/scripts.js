@@ -1,4 +1,4 @@
-// Hamburger menu functionality with toggle//
+// Hamburger menu functionality with toggle
 let menu=function(){
     //if and else provide logic for toggle
     if (document.getElementById("menu").style.display=="flex"){
